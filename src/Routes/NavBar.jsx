@@ -1,24 +1,20 @@
+// import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+function Navbar() {
   return (
-    <div id="navbar">
-      <Link to="/">
-        <div id="logo">
-          <img
-            src="https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/Kalvium-Logo.png"
-            alt=""
-          />
-        </div>
-      </Link>
-      <div id="options">
-        <Link style={{ textDecoration: "none", color: "white" }} to="/contact">
-          <div id="option">Contact</div>
-        </Link>
-        <Link style={{ textDecoration: "none", color: "white" }} to="/form">
-          <div id="option">Registration Form</div>
+    <nav className="bg-green-500 pt-2 p-2">
+      <div>
+        <Link to="/">
+          <h1>Kalvium</h1>
         </Link>
       </div>
-    </div>
+      <div>
+        <Link to="/contact">Contacts</Link>
+        <Link to="/form">Registration Form</Link>
+      </div>
+    </nav>
   );
 }
+
+export default Navbar;
